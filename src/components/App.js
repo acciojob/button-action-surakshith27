@@ -11,7 +11,7 @@ const App = (props) => {
           me so happy
         </p>
         
-      <button id="click" onClick={document.getElementById("para").style.display="block"}>
+      <button id="click" onClick={{ document.getElementById("para").style.display="block" }}>
         Click me
       </button>
     </div>
