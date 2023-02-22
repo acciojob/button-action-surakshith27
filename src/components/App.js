@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import './../styles/App.css';
 
-const App = () => {
+function App() {
   const [isClicked, setIsClicked] = useState(false);
   
   return (
-    <div className="App" id="main">
+    <div id="main">
    
       {isClicked && (
         <p id="para">
