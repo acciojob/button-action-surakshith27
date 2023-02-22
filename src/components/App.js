@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import './../styles/App.css';
 
-const App = (props) => {
-
+const App = () => {
+  const [isClicked, setIsClicked] = useState(false);
+  
   return (
     <div className="App" id="main">
    
-        <p id="para" style={{display: "none"}}>
-          Hello, I've learnt to use the full-stack evaluation tool. This makes
-          me so happy
+      {isClicked && (
+        <p id="para">
+          Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy
         </p>
+      )}
         
-      <button id="click" onClick={{ document.getElementById("para").style.display="block" }}>
+      <button id="click" onClick={() => {setIsClicked(true);}}>
         Click me
       </button>
     </div>
